@@ -40,9 +40,7 @@ export default class Note extends Component {
         }
 */
 
-    testClass() {
-        console.log('works');
-    }
+
     render() {
 
         let idx = this.state.idx;
