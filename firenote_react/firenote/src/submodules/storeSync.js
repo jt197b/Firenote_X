@@ -1,3 +1,5 @@
+/*global chrome*/
+
 // stores item into Google Chrome sync
 export function storeSync(idx,dict) {
     let key = idx.toString(),

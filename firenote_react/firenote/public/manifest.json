@@ -20,7 +20,7 @@
    "128": "images/icon128.png"
   },
 
-  "content_security_policy": "script-src 'self' 'sha256-X14Dv/JPjbpTTTJyAX3I1IqxLWHzOjtXtjphkt/1lsc=' 'unsafe-eval'; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'sha256-ji/st2VpjK8N/dChStzwhzjVGOBb3FGI6wyZ/gn94HE=' 'unsafe-eval'; object-src 'self'",
 
   "permissions": [
   "storage"

@@ -1,28 +1,73 @@
 import './App.css';
-import Note from './components/Note/Note';
+import React, { Component } from 'react';
 import RightMenu from './components/RightMenu/RightMenu';
-import MainMenu from './components/MainMenu/MainMenu';
+import NoteContainer from './components/NoteContainer/NoteContainer';
 
-function App() {
-  return (
-    <div className="App">
+export default class App extends Component {
 
-      <div id="container">
-      
-        <RightMenu/>
+  constructor(props) {
+    super(props);
 
-        <MainMenu />
+    this.state = {
+      existingNotes: this.props.existingNotes
+    }
 
-        <Note idx="1"></Note>
-        <Note idx="2"></Note>
+  }
+
+  render() {
+
+    console.log("This is existing notes: ");
+    console.log(this.state.existingNotes);
+    return (
+      <div className="App">
+
+        <div id="container">
+        
+          <RightMenu/>
+
+          <NoteContainer notes={this.state.existingNotes}/>
+          
+        </div>
 
       </div>
+    );
+  }
 
-    </div>
+  /*
+  function successCallback(storageCache) {
+    console.log("Storage cache: ");
+    console.log(storageCache);
 
+    let noteTemplates = parseLoadedNotes(storageCache);
+    console.log("These are all notes: ");
+    console.log(noteTemplates);
+    console.log(noteTemplates[0]);
+    return noteTemplates;
+  }
 
+  function failureCallback(storageCache) {
+    console.log("Storage cache: ");
+    console.log(storageCache);
+  }
 
-  );
+  loadExistingNotes().then(successCallback, failureCallback)
+  */
+  /*
+  // retrive existing notes from Chrome storage in JSON format
+  let storageCache = loadExistingNotes().then(noteTemplates => {
+    console.log("Notes loaded.");
+
+    let noteTemplates = parseNoteTemplates(storageCache);
+    //return (parseNoteTemplates(storageCache));
+    return noteTemplates;
+  });
+  console.log("Storage cache: ");
+  console.log(storageCache);
+
+  // parse JSON to retrieve note data
+  //let noteTemplates = parseNoteTemplates(storageCache);
+  */
+  
+
+  
 }
-
-export default App;

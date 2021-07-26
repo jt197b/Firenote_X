@@ -1,35 +1,45 @@
+#menu {
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  width: 250px;
+  text-align: right;
+  display: block;
+}
+
 .collapsible,.clear {
-    float: right;
-    display: block;
-    letter-spacing: 1px;
-    color: rgb(68, 68, 68);
-    background-color: white;
-    cursor: pointer;
-    padding: 10px;
-    width: 60%;
-    border: none;
-    text-align: right;
-    outline: none;
-    font-size: 13px;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    margin: 0 auto;
-  }
-  
-  .collapsible:hover,.clear:hover, .headerList:hover{
-    border: 2px solid #fda265;
-    border-radius: 25px;
-    cursor: pointer;
-  }
-  
-  .content {
-    padding: 0 18px;
-    text-align: right;
-    width: 90%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    word-wrap: break-word;
-    letter-spacing: normal;
-    font-size: 13px;
-  }
+  float: right;
+  display: block;
+  letter-spacing: 1px;
+  /*color: rgb(68, 68, 68);*/
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+  padding: 10px;
+  width: 60%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 13px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.collapsible:hover,.clear:hover, .headerList:hover{
+  border: 2px solid #fda265;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.content {
+  padding: 0 18px;
+  text-align: right;
+  width: 90%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  word-wrap: break-word;
+  letter-spacing: normal;
+  font-size: 13px;
+}

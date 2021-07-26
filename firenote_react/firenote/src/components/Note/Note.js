@@ -8,15 +8,32 @@ export default class Note extends Component {
 
     constructor(props) {
         super(props);
-        
+        /*
         this.state = {
-            title: 'Note ' + props.idx,
-            isMemo: false,
+            title: props.title,
+            isMemo: props.isMemo,
             isMinimized: false,
             isHidden: false,
             idx: props.idx,
+            todo: [],
+            posTop: props.posTop,
+            posLeft: props.posLeft,
+            memo: null,
+        }
+        */
+
+        this.state = {
+            headerText: props.headerText,
+            hidden: props.hidden,
+            isMemo: props.isMemo,
+            memo: props.memo,
+            minimized: props.minimized,
+            posLeft: props.posLeft,
+            posTop: props.posTop,
+            todo: props.todo,
         }
     }
+
 /*
         this.note = noteContainer;
         this.storageQuery = storageQuery;
@@ -45,11 +62,15 @@ export default class Note extends Component {
 
         let idx = this.state.idx;
         
+        console.log("this is header: " + this.state.headerText + this.props.headerText);
+        console.log(this.props);
+        console.log(this.state);
+
         if (this.state.isMemo) {
             return (
                 <div className={styles.drag}>
         
-                    <input className={styles.dragHeader} maxlength="30" readOnly="true" id={'mydiv' + idx + 'header'} value={'Note ' + idx}></input>
+                    <input className={styles.dragHeader} maxlength="30" readOnly="true" id={'mydiv' + idx + 'header'} value={this.state.headerText}></input>
                     <img src={editBtn} className="editHeader" id={styles.edit}/>
                     <img src={minimizeBtn} className="minimize" id={styles.minimize}/>
                     <img src={exitBtn}className="deleteNote" id={styles.exit}/>
@@ -64,7 +85,7 @@ export default class Note extends Component {
             return (
                 <div className={styles.drag}>
                     
-                    <input className={styles.dragHeader} maxlength="30" readOnly="true" id={'mydiv' + idx + 'header'} value={'Note ' + idx}></input>
+                    <input className={styles.dragHeader} maxlength="30" readOnly="true" id={'mydiv' + idx + 'header'} value={this.state.headerText}></input>
                     <img src={editBtn} className="editHeader" id={styles.edit}/>
                     <img src={minimizeBtn} className="minimize" id={styles.minimize}/>
                     <img src={exitBtn} className="deleteNote" id={styles.exit}/>

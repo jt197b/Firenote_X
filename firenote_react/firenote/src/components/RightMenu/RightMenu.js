@@ -20,10 +20,10 @@ export default class RightMenu extends Component {
     render() {
 
         return (
-            <div id="menu">
+            <div id={styles.menu}>
             <div><button onClick={this.toggleDarkMode} className={styles.collapsible} id="toggleDarkMode">dark mode</button></div>
-            <div><button className={styles.clear} id="clearAll">clear all</button></div>
-            <div><button className={styles.clear} id="dockAll">dock all</button></div>
+            <div><button onClick={this.clearAll} className={styles.clear} id="clearAll">clear all</button></div>
+            <div><button onClick={this.dockAll} className={styles.clear} id="dockAll">dock all</button></div>
             <div><button className={styles.clear} id="myBtn">quick guide +</button></div>
   
             <div>
